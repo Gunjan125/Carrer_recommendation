@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Recommendation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            align-self: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+        }
+        .career-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+        .career-options label {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .career-options label:hover {
+            background: #e0e0e0;
+        }
+        .career-options input {
+            margin-right: 10px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Career Recommendation</h1>
+        <form id="careerForm">
+            <!-- Step 1 -->
+            <div class="step active">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Drawing"> Drawing</label>
+                    <label><input type="checkbox" name="career" value="Dancing"> Dancing</label>
+                    <label><input type="checkbox" name="career" value="Singing"> Singing</label>
+                    <label><input type="checkbox" name="career" value="Sports"> Sports</label>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="step 1">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Coding"> Coding</label>
+                    <label><input type="checkbox" name="career" value="Teaching"> Teaching</label>
+                    <label><input type="checkbox" name="career" value="Acting"> Acting</label>
+                    <label><input type="checkbox" name="career" value="Travelling"> Travelling</label>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="step 2">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Photography"> Photography</label>
+                    <label><input type="checkbox" name="career" value="Gardening"> Gardening</label>
+                    <label><input type="checkbox" name="career" value="Animals"> Animals</label>
+                    <label><input type="checkbox" name="career" value="Researching"> Researching</label>
+                </div>
+            </div>
+            <div class="step 3">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Video Game"> Video Game</label>
+                    <label><input type="checkbox" name="career" value="Exercise"> Exercise</label>
+                    <label><input type="checkbox" name="career" value="Business"> Business</label>
+                    <label><input type="checkbox" name="career" value="Researching"> Researching</label>
+                </div>
+            </div>
+            <div class="step 4">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Electricity Components"> Electricity Components</label>
+                    <label><input type="checkbox" name="career" value="Mechanic Parts"> Mechanic Parts</label>
+                    <label><input type="checkbox" name="career" value="Computer Parts"> Computer Parts</label>
+                    <label><input type="checkbox" name="career" value="Researching"> Researching</label>
+                </div>
+            </div>
+            <div class="step 5">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Botany"> Botany</label>
+                    <label><input type="checkbox" name="career" value="Zology"> Zology</label>
+                    <label><input type="checkbox" name="career" value="Sociology"> Sociology</label>
+                    <label><input type="checkbox" name="career" value="Psycology"> Psycology</label>
+                </div>
+            </div>
+            <div class="step 6">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Architecture"> Architecture</label>
+                    <label><input type="checkbox" name="career" value="Histroic Collection"> Histroic Collection</label>
+                    <label><input type="checkbox" name="career" value="Physics"> Physics</label>
+                    <label><input type="checkbox" name="career" value="Accounting"> Accounting</label>
+                </div>
+            </div>
+            <div class="step 7">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Economics"> Economics</label>
+                    <label><input type="checkbox" name="career" value="Geography"> Geography</label>
+                    <label><input type="checkbox" name="career" value="History"> History</label>
+                    <label><input type="checkbox" name="career" value="Science"> Science</label>
+                </div>
+            </div>
+            <div class="step 8">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Business Education"> Business Education</label>
+                    <label><input type="checkbox" name="career" value="Chemistry"> Chemistry</label>
+                    <label><input type="checkbox" name="career" value="Mathematics"> Mathematics</label>
+                    <label><input type="checkbox" name="career" value="Biology"> Biology</label>
+                </div>
+            </div>
+            <div class="step 9">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Makeup"> Makeup</label>
+                    <label><input type="checkbox" name="career" value="Designing"> Designing</label>
+                    <label><input type="checkbox" name="career" value="Content Writing"> Content Writing</label>
+                    <label><input type="checkbox" name="career" value="Reading"> Reading </label>
+                </div>
+            </div>
+            <div class="step 10">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Cartooning"> Cartooning</label>
+                    <label><input type="checkbox" name="career" value="Debating"> Debating</label>
+                    <label><input type="checkbox" name="career" value="Astrology"> Astrology</label>
+                    <label><input type="checkbox" name="career" value="Yoga"> Yoga</label>
+                </div>
+            </div>
+            <div class="step 11">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Hindi"> Hindi</label>
+                    <label><input type="checkbox" name="career" value="French"> French</label>
+                    <label><input type="checkbox" name="career" value="English"> English</label>
+                    <label><input type="checkbox" name="career" value="Urdu"> Urdu</label>
+                </div>
+            </div>
+            <div class="step 12">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Solving Puzzles"> Solving Puzzles</label>
+                    <label><input type="checkbox" name="career" value="Gymnastics"> Gymnastics</label>
+                    <label><input type="checkbox" name="career" value="Cycling"> Cycling</label>
+                    <label><input type="checkbox" name="career" value="Knitting"> Knitting</label>
+                </div>
+            </div>
+            <div class="step 13">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Engineering"> Engineering</label>
+                    <label><input type="checkbox" name="career" value="Doctor"> Doctor</label>
+                    <label><input type="checkbox" name="career" value="Pharmisist"> Pharmisist</label>
+                    <label><input type="checkbox" name="career" value="Director"> Director</label>
+                </div>
+            </div>
+            <div class="step 14">
+                <div class="career-options">
+                    <label><input type="checkbox" name="career" value="Journalism"> Journalism</label>
+                    <label><input type="checkbox" name="career" value="Listening Music"> Listening Music</label>
+                    
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn" id="prevBtn" onclick="changeStep(-1)">Previous</button>
+                <button type="button" class="btn" id="nextBtn" onclick="changeStep(1)">Next</button>
+            </div>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        let currentStep = 0;
+        const steps = document.querySelectorAll('.step');
+        const resultDiv = document.getElementById('result');
+
+        function showStep() {
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', index === currentStep);
+            });
+
+            // Update button visibility
+            document.getElementById('prevBtn').style.display = currentStep === 0 ? 'none' : 'inline-block';
+            document.getElementById('nextBtn').innerText = currentStep === steps.length - 1 ? 'Recommend' : 'Next';
+        }
+
+        function changeStep(step) {
+            if (step === 1 && currentStep === steps.length - 1) {
+                // recommendCareer();
+                return;
+            }
+            currentStep += step;
+            showStep();
+        }
+
+        // function recommendCareer() {
+        //     const checkboxes = document.querySelectorAll('input[name="career"]:checked');
+        //     const selectedCareers = Array.from(checkboxes).map(cb => cb.value);
+
+        //     if (selectedCareers.length > 0) {
+        //         resultDiv.style.display = 'block';
+        //         resultDiv.innerHTML = <strong>Recommended Careers:</strong> ${selectedCareers.join(', ')};
+        //     } else {
+        //         resultDiv.style.display = 'block';
+        //         resultDiv.innerHTML = <strong>Please select at least one interest!</strong>;
+        //     }
+        // }
+
+        // Initial setup
+        showStep();
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
