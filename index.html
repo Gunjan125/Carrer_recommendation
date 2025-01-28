@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
             margin: 0;
             background-color: #f9f9f9;
         }
+
         .container {
             max-width: 600px;
             margin: 50px auto;
@@ -20,22 +22,27 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             align-self: center;
         }
+
         h1 {
             text-align: center;
             color: #333;
         }
+
         .step {
             display: none;
         }
+
         .step.active {
             display: block;
         }
+
         .career-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             align-items: center;
         }
+
         .career-options label {
             display: flex;
             align-items: center;
@@ -45,17 +52,21 @@
             cursor: pointer;
             transition: background 0.3s;
         }
+
         .career-options label:hover {
             background: #e0e0e0;
         }
+
         .career-options input {
             margin-right: 10px;
         }
+
         .btn-group {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
         }
+
         .btn {
             padding: 10px 20px;
             font-size: 16px;
@@ -66,9 +77,11 @@
             cursor: pointer;
             transition: background 0.3s;
         }
+
         .btn:hover {
             background: #0056b3;
         }
+
         .result {
             margin-top: 20px;
             padding: 20px;
@@ -80,6 +93,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Career Recommendation</h1>
@@ -115,13 +129,14 @@
                 <div class="career-options">
                     <label><input type="checkbox" name="career" value="Video Game"> Video Game</label>
                     <label><input type="checkbox" name="career" value="Exercise"> Exercise</label>
-                    <label><input type="checkbox" name="career" value="Business"> Business</label>
+                    <label><input type="checkbox" name="career" value="Bussiness"> Bussiness</label>
                     <label><input type="checkbox" name="career" value="Researching"> Researching</label>
                 </div>
             </div>
             <div class="step 4">
                 <div class="career-options">
-                    <label><input type="checkbox" name="career" value="Electricity Components"> Electricity Components</label>
+                    <label><input type="checkbox" name="career" value="Electricity Components"> Electricity
+                        Components</label>
                     <label><input type="checkbox" name="career" value="Mechanic Parts"> Mechanic Parts</label>
                     <label><input type="checkbox" name="career" value="Computer Parts"> Computer Parts</label>
                     <label><input type="checkbox" name="career" value="Researching"> Researching</label>
@@ -153,7 +168,7 @@
             </div>
             <div class="step 8">
                 <div class="career-options">
-                    <label><input type="checkbox" name="career" value="Business Education"> Business Education</label>
+                    <label><input type="checkbox" name="career" value="Bussiness Education"> Bussiness Education</label>
                     <label><input type="checkbox" name="career" value="Chemistry"> Chemistry</label>
                     <label><input type="checkbox" name="career" value="Mathematics"> Mathematics</label>
                     <label><input type="checkbox" name="career" value="Biology"> Biology</label>
@@ -163,7 +178,7 @@
                 <div class="career-options">
                     <label><input type="checkbox" name="career" value="Makeup"> Makeup</label>
                     <label><input type="checkbox" name="career" value="Designing"> Designing</label>
-                    <label><input type="checkbox" name="career" value="Content Writing"> Content Writing</label>
+                    <label><input type="checkbox" name="career" value="Content writing"> Content writing</label>
                     <label><input type="checkbox" name="career" value="Reading"> Reading </label>
                 </div>
             </div>
@@ -171,7 +186,7 @@
                 <div class="career-options">
                     <label><input type="checkbox" name="career" value="Cartooning"> Cartooning</label>
                     <label><input type="checkbox" name="career" value="Debating"> Debating</label>
-                    <label><input type="checkbox" name="career" value="Astrology"> Astrology</label>
+                    <label><input type="checkbox" name="career" value="Asrtology"> Asrtology</label>
                     <label><input type="checkbox" name="career" value="Yoga"> Yoga</label>
                 </div>
             </div>
@@ -193,7 +208,7 @@
             </div>
             <div class="step 13">
                 <div class="career-options">
-                    <label><input type="checkbox" name="career" value="Engineering"> Engineering</label>
+                    <label><input type="checkbox" name="career" value="Engeeniering"> Engeeniering</label>
                     <label><input type="checkbox" name="career" value="Doctor"> Doctor</label>
                     <label><input type="checkbox" name="career" value="Pharmisist"> Pharmisist</label>
                     <label><input type="checkbox" name="career" value="Director"> Director</label>
@@ -203,7 +218,7 @@
                 <div class="career-options">
                     <label><input type="checkbox" name="career" value="Journalism"> Journalism</label>
                     <label><input type="checkbox" name="career" value="Listening Music"> Listening Music</label>
-                    
+
                 </div>
             </div>
             <div class="btn-group">
@@ -231,30 +246,66 @@
 
         function changeStep(step) {
             if (step === 1 && currentStep === steps.length - 1) {
-                // recommendCareer();
+                recommendCareer();
                 return;
             }
             currentStep += step;
             showStep();
         }
 
-        // function recommendCareer() {
-        //     const checkboxes = document.querySelectorAll('input[name="career"]:checked');
-        //     const selectedCareers = Array.from(checkboxes).map(cb => cb.value);
+        function recommendCareer() {
+            // All possible career options
+            const allCareers = [
+                'Drawing', 'Dancing', 'Singing', 'Sports', 'Video Game', 'Acting', 'Travelling',
+                'Gardening', 'Animals', 'Photography', 'Teaching', 'Exercise', 'Coding',
+                'Electricity Components', 'Mechanic Parts', 'Computer Parts', 'Researching',
+                'Architecture', 'Historic Collection', 'Botany', 'Zoology', 'Physics',
+                'Accounting', 'Economics', 'Sociology', 'Geography', 'Psycology', 'History',
+                'Science', 'Bussiness Education', 'Chemistry', 'Mathematics', 'Biology', 'Makeup',
+                'Designing', 'Content writing', 'Crafting', 'Literature', 'Reading', 'Cartooning',
+                'Debating', 'Asrtology', 'Hindi', 'French', 'English', 'Urdu', 'Other Language',
+                'Solving Puzzles', 'Gymnastics', 'Yoga', 'Engeeniering', 'Doctor', 'Pharmisist',
+                'Cycling', 'Knitting', 'Director', 'Journalism', 'Bussiness', 'Listening Music'
+            ];
 
-        //     if (selectedCareers.length > 0) {
-        //         resultDiv.style.display = 'block';
-        //         resultDiv.innerHTML = <strong>Recommended Careers:</strong> ${selectedCareers.join(', ')};
-        //     } else {
-        //         resultDiv.style.display = 'block';
-        //         resultDiv.innerHTML = <strong>Please select at least one interest!</strong>;
-        //     }
-        // }
+            // empty object
+            const careerData = {};
 
+            allCareers.forEach(career => {
+                const checkbox = document.querySelector(`input[name="career"][value="${career}"]`);
+                // Set the value to 1 if checked, else 0
+                careerData[career] = checkbox && checkbox.checked ? 1 : 0;
+            });
+
+            // hashmap form
+            console.log(careerData);
+
+            // sending data from this carrer route
+            fetch("http://127.0.0.1:3300/carrer", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(careerData)
+            })
+                .then(response => response.json())
+                .then(result => {
+                    // Display the result
+                    resultDiv.style.display = 'block';
+                    resultDiv.innerHTML = `<strong>Recommended Career:</strong> ${result.recommendedCareer}`;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    resultDiv.style.display = 'block';
+                    resultDiv.innerHTML = `<strong>An error occurred. Please try again later.</strong>`;
+                });
+        }
         // Initial setup
         showStep();
     </script>
+
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
